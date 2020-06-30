@@ -10,4 +10,9 @@ public class Student {
 //    grades is an ArrayList that contains a list of Integer numbers.
     public ArrayList<Integer> grades;
 
+    public Student(long id, String name) {
+        this.id = id;
+        this.name = name;
+        this.grades = new ArrayList<>();
+    }
 }

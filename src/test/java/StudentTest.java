@@ -10,8 +10,9 @@ public class StudentTest {
 //    }
 
     @Test
-    public void hasConstructor() {
-        Student student = new Student();
-
+    public void hasCorrectConstructor() {
+        Student student = new Student(3, "Cody");
+        assertEquals(3, student.id);
+        assertEquals("Cody", student.name);
     }
 }
