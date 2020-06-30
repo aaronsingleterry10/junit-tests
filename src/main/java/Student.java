@@ -15,4 +15,24 @@ public class Student {
         this.name = name;
         this.grades = new ArrayList<>();
     }
+
+    public long getId() {
+        return this.id;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void addGrade(int grade) {
+        this.grades.add(grade);
+    }
+
+    public double getGradeAverage() {
+        double sum = 0;
+        for (Integer x : this.grades) {
+            sum += x;
+        }
+        return sum / this.grades.size();
+    }
 }
