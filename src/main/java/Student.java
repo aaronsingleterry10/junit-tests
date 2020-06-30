@@ -35,4 +35,23 @@ public class Student {
         }
         return sum / this.grades.size();
     }
+
+    public void updateGrade(int from, int to) {
+        for (int i = 0; i < this.grades.size(); i++) {
+            if (this.grades.get(i) == from) {
+                this.grades.remove(i);
+                this.grades.add(to);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        Student s1 = new Student(33, "Aaron");
+        s1.grades.add(90);
+        s1.grades.add(100);
+        s1.grades.add(80);
+        s1.updateGrade(80, 90);
+        s1.updateGrade(100, 95);
+        System.out.println(s1.grades);
+    }
 }

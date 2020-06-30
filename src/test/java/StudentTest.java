@@ -12,6 +12,7 @@ public class StudentTest {
         student.addGrade(90);
         student.addGrade(85);
         student.addGrade(95);
+        student.updateGrade(85, 90);
     }
 
     @Test
@@ -41,8 +42,8 @@ public class StudentTest {
     @SuppressWarnings("deprecation")
     @Test
     public void testStudentAverage() {
-        double expected = 90;
+        double expected = 92;
         double actual = student.getGradeAverage();
-        assertEquals(expected, actual, 0);
+        assertEquals(expected, actual, .5);
     }
 }
