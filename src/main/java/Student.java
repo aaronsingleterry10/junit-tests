@@ -39,8 +39,16 @@ public class Student {
     public void updateGrade(int from, int to) {
         for (int i = 0; i < this.grades.size(); i++) {
             if (this.grades.get(i) == from) {
+                this.grades.add(this.grades.indexOf(from) + 1, to);
                 this.grades.remove(i);
-                this.grades.add(to);
+            }
+        }
+    }
+
+    public void deleteGrade(int removeGrade) {
+        for (int i = 0; i < this.grades.size(); i++) {
+            if (this.grades.get(i) == removeGrade) {
+                this.grades.remove(i);
             }
         }
     }
@@ -50,8 +58,10 @@ public class Student {
         s1.grades.add(90);
         s1.grades.add(100);
         s1.grades.add(80);
-        s1.updateGrade(80, 90);
+//        s1.updateGrade(80, 90);
         s1.updateGrade(100, 95);
         System.out.println(s1.grades);
+//        s1.deleteGrade(90);
+//        System.out.println(s1.grades);
     }
 }
