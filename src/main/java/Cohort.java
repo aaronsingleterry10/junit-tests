@@ -25,6 +25,16 @@ public class Cohort {
         return students;
     }
 
+    public String findStudentById(long id) {
+        String output = "";
+        for (Student x: this.getStudents()) {
+            if (x.getId() == id) {
+                return output += x.getName();
+            }
+        }
+        return output;
+    }
+
     public static void main(String[] args) {
         Cohort emptyCohort = new Cohort();
         System.out.println(emptyCohort.getStudents().size());
