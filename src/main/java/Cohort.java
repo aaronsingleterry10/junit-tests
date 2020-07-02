@@ -24,4 +24,9 @@ public class Cohort {
     public List<Student> getStudents() {
         return students;
     }
+
+    public static void main(String[] args) {
+        Cohort emptyCohort = new Cohort();
+        System.out.println(emptyCohort.getStudents().size());
+    }
 }
